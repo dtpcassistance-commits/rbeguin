@@ -3,801 +3,725 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>R.BEGUIN Électricité — Électricien à Saumur (49)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<title>A2C Bâtiment – Couverture · Étanchéité · Bâtiment à Vierzon</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #f7f6f3;
-  --white: #ffffff;
-  --dark: #1a1a1a;
-  --mid: #3d3d3d;
-  --muted: #888;
-  --light: #efefec;
-  --border: #e2e1de;
-  --accent: #f5c400;
-  --accent-dark: #d4a800;
-  --accent-bg: #fffbea;
-  --blue: #1d3557;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--dark);font-family:'Outfit',sans-serif;font-weight:400;overflow-x:hidden;line-height:1.6}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* TOPBAR */
-.topbar{background:var(--blue);padding:9px 40px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.topbar-left{display:flex;align-items:center;gap:24px}
-.topbar-item{display:flex;align-items:center;gap:7px;font-size:0.8rem;color:rgba(255,255,255,0.75)}
-.topbar-phone{display:flex;align-items:center;gap:7px;font-size:0.9rem;font-weight:700;color:var(--accent);text-decoration:none}
-.topbar-badge{background:var(--accent);color:#000;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px}
+  :root {
+    --rouge:    #C0392B;
+    --rouge-dk: #922B21;
+    --rouge-lt: #f9eceb;
+    --ardoise:  #1C2630;
+    --ardoise2: #2C3E50;
+    --or:       #D4A017;
+    --gris:     #6B7280;
+    --clair:    #F8F5F0;
+    --blanc:    #FFFFFF;
+    --font-titre: 'Playfair Display', Georgia, serif;
+    --font-corps: 'DM Sans', sans-serif;
+  }
 
-/* NAV */
-nav{background:var(--white);position:sticky;top:0;z-index:200;border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(0,0,0,0.05)}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:72px}
-.nav-logo-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--blue)}
-.nav-logo-sub{font-size:0.65rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-top:2px}
-.nav-links{list-style:none;display:flex;align-items:center;gap:4px}
-.nav-links a{text-decoration:none;font-size:0.85rem;font-weight:500;color:var(--mid);padding:8px 14px;border-radius:4px;transition:color .18s,background .18s}
-.nav-links a:hover{color:var(--blue);background:var(--light)}
-.nav-cta-btn{background:var(--accent);color:#000;font-size:0.82rem;font-weight:600;padding:10px 22px;border-radius:4px;text-decoration:none;white-space:nowrap;transition:background .18s,transform .18s;display:flex;align-items:center;gap:7px}
-.nav-cta-btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-corps); color: var(--ardoise); background: var(--blanc); line-height: 1.65; }
 
-/* BURGER */
-.burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:none;border:1px solid var(--border);border-radius:4px;cursor:pointer;padding:10px}
-.burger span{display:block;width:100%;height:1.5px;background:var(--dark);transition:transform .3s,opacity .2s;transform-origin:center}
-.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(28, 38, 48, 0.97);
+    backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 70px;
+    border-bottom: 2px solid var(--rouge);
+  }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-badge {
+    width: 44px; height: 44px; border-radius: 6px;
+    background: var(--rouge);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-titre); font-weight: 900;
+    color: white; font-size: 18px; letter-spacing: -1px;
+  }
+  .logo-text { color: white; font-family: var(--font-titre); font-size: 18px; line-height: 1.1; }
+  .logo-text span { display: block; font-size: 11px; font-family: var(--font-corps); font-weight: 300; color: #aaa; letter-spacing: 2px; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: #ccc; text-decoration: none; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--or); }
+  .nav-cta { background: var(--rouge); color: white; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 13px; letter-spacing: .5px; transition: background .2s; white-space: nowrap; }
+  .nav-cta:hover { background: var(--rouge-dk); }
+  .burger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 4px; }
 
-/* MOBILE MENU */
-.mobile-menu{display:none;position:fixed;inset:0;z-index:190;background:var(--white);flex-direction:column;justify-content:center;align-items:center;opacity:0;pointer-events:none;transition:opacity .25s;padding:40px 24px}
-.mobile-menu.open{opacity:1;pointer-events:all}
-.mobile-nav-links{list-style:none;display:flex;flex-direction:column;align-items:center;width:100%;max-width:320px;margin-bottom:28px}
-.mobile-nav-links li{width:100%;border-bottom:1px solid var(--border)}
-.mobile-nav-links li:first-child{border-top:1px solid var(--border)}
-.mobile-nav-links a{display:block;padding:18px 0;font-size:1.05rem;font-weight:500;color:var(--dark);text-decoration:none;text-align:center;transition:color .2s}
-.mobile-nav-links a:hover{color:var(--blue)}
-.mobile-menu-cta{background:var(--accent);color:#000;font-size:0.88rem;font-weight:600;padding:14px 36px;border-radius:4px;text-decoration:none;margin-top:8px}
-.mobile-menu-phone{margin-top:16px;font-size:1.1rem;font-weight:700;color:var(--blue);text-decoration:none}
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    background: var(--ardoise);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding-top: 70px;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(255,255,255,.015) 30px, rgba(255,255,255,.015) 31px);
+  }
+  .hero-img {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 55%;
+    object-fit: cover; opacity: .2;
+    filter: grayscale(40%);
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(100deg, var(--ardoise) 40%, transparent 80%);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 620px;
+    padding: 60px 5% 60px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(192,57,43,.15);
+    border: 1px solid rgba(192,57,43,.4);
+    color: #e8837a;
+    padding: 6px 14px; border-radius: 30px;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--rouge);
+    animation: pulse 1.8s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: .5; transform: scale(1.5); }
+  }
+  .hero h1 { font-family: var(--font-titre); font-size: clamp(44px, 6vw, 76px); font-weight: 900; color: white; line-height: 1.05; margin-bottom: 24px; }
+  .hero h1 em { color: var(--rouge); font-style: normal; }
+  .hero p { font-size: 17px; color: #b0bec5; max-width: 500px; line-height: 1.75; margin-bottom: 40px; }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary { background: var(--rouge); color: white; padding: 15px 32px; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 15px; transition: all .2s; border: 2px solid var(--rouge); }
+  .btn-primary:hover { background: var(--rouge-dk); border-color: var(--rouge-dk); }
+  .btn-outline { background: transparent; color: white; padding: 15px 32px; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 15px; transition: all .2s; border: 2px solid rgba(255,255,255,.3); }
+  .btn-outline:hover { border-color: white; }
+  .hero-stats { display: flex; gap: 40px; margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,.1); flex-wrap: wrap; }
+  .stat-n { font-family: var(--font-titre); font-size: 36px; font-weight: 900; color: var(--or); line-height: 1; }
+  .stat-l { font-size: 12px; color: #78909C; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 4px; font-weight: 500; }
 
-/* HERO */
-.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;padding:0}
-.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&q=80');background-size:cover;background-position:center}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(29,53,87,0.9) 0%,rgba(29,53,87,0.65) 55%,rgba(29,53,87,0.3) 100%)}
-.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 40px 140px;width:100%}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#000;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;padding:6px 14px;border-radius:2px;margin-bottom:28px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;color:var(--white);line-height:1.15;max-width:660px;margin-bottom:20px}
-.hero h1 span{color:var(--accent)}
-.hero-desc{font-size:1rem;color:rgba(255,255,255,0.8);max-width:500px;line-height:1.75;margin-bottom:36px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#000;font-family:'Outfit',sans-serif;font-size:0.88rem;font-weight:600;padding:13px 26px;border-radius:4px;text-decoration:none;border:none;cursor:pointer;transition:background .18s,transform .18s}
-.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
-.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-family:'Outfit',sans-serif;font-size:0.88rem;font-weight:500;padding:13px 26px;border-radius:4px;border:1.5px solid rgba(255,255,255,0.45);text-decoration:none;cursor:pointer;transition:border-color .18s,background .18s}
-.btn-outline:hover{border-color:white;background:rgba(255,255,255,0.08)}
+  /* ─── CERTIF BAND ─── */
+  .certif-band { background: var(--rouge); padding: 16px 5%; display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+  .certif-item { display: flex; align-items: center; gap: 10px; color: white; font-size: 13px; font-weight: 500; letter-spacing: .5px; }
+  .certif-icon { font-size: 20px; }
 
-/* STATS BAR */
-.hero-stats{position:absolute;bottom:0;left:0;right:0;background:var(--white);z-index:3;border-top:3px solid var(--accent)}
-.hero-stats-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(4,1fr)}
-.hero-stat{padding:22px 20px;display:flex;align-items:center;gap:14px;border-right:1px solid var(--border)}
-.hero-stat:last-child{border-right:none}
-.stat-icon{width:42px;height:42px;background:var(--accent-bg);border:1px solid rgba(245,196,0,0.4);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-.stat-num{font-size:1.25rem;font-weight:700;color:var(--blue);line-height:1}
-.stat-lbl{font-size:0.72rem;color:var(--muted);margin-top:2px}
+  /* ─── SECTIONS ─── */
+  section { padding: 96px 5%; }
+  .section-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--rouge); font-weight: 600; margin-bottom: 10px; }
+  .section-title { font-family: var(--font-titre); font-size: clamp(32px, 4vw, 52px); font-weight: 900; line-height: 1.1; color: var(--ardoise); margin-bottom: 20px; }
+  .section-lead { font-size: 17px; color: var(--gris); max-width: 560px; line-height: 1.75; }
 
-/* SECTIONS */
-section{padding:88px 40px}
-.container{max-width:1200px;margin:0 auto}
-.section-tag{font-size:0.7rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent-dark);display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.section-tag::before{content:'';width:28px;height:2px;background:var(--accent)}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.5vw,2.6rem);font-weight:700;color:var(--blue);line-height:1.2;margin-bottom:14px}
-.section-sub{font-size:0.95rem;color:var(--muted);max-width:540px;line-height:1.75}
+  /* ─── SERVICES ─── */
+  #services { background: var(--clair); }
+  .services-header { text-align: center; margin-bottom: 64px; }
+  .services-header .section-lead { margin: 0 auto; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; }
+  .service-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,.08); transition: transform .3s, box-shadow .3s; cursor: default; }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,.14); }
+  .service-img-wrap { height: 200px; overflow: hidden; background: var(--ardoise2); position: relative; }
+  .service-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; display: block; }
+  .service-card:hover .service-img-wrap img { transform: scale(1.07); }
+  .service-num { position: absolute; top: 12px; left: 12px; background: var(--rouge); color: white; width: 32px; height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; font-family: var(--font-titre); }
+  .service-body { padding: 28px; }
+  .service-body h3 { font-family: var(--font-titre); font-size: 22px; font-weight: 700; color: var(--ardoise); margin-bottom: 12px; }
+  .service-body p { color: var(--gris); font-size: 15px; line-height: 1.7; margin-bottom: 16px; }
+  .service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { background: var(--rouge-lt); color: var(--rouge-dk); font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 600; letter-spacing: .3px; }
 
-/* PRESENTATION */
-.presentation{background:var(--white)}
-.presentation-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.pres-img-wrap{position:relative}
-.pres-img-wrap img{width:100%;height:440px;object-fit:cover;border-radius:6px;display:block}
-.pres-badge{position:absolute;bottom:-18px;right:-18px;background:var(--blue);color:white;width:108px;height:108px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:4px solid var(--white);box-shadow:0 4px 20px rgba(0,0,0,0.15)}
-.pres-badge-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--accent);line-height:1}
-.pres-badge-txt{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-top:4px}
-.pres-content{padding-right:10px}
-.pres-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin:26px 0 32px}
-.pres-list li{display:flex;align-items:flex-start;gap:11px;font-size:0.9rem;color:var(--mid)}
-.pres-check{width:20px;height:20px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;color:#000;font-weight:700}
-.rge-inline{display:inline-flex;align-items:center;gap:8px;background:var(--accent-bg);border:1px solid var(--accent);padding:9px 16px;border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--dark)}
+  /* ─── APROPOS ─── */
+  #apropos { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; padding: 96px 5%; }
+  .apropos-img-stack { position: relative; }
+  .img-main { width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover; display: block; background: var(--clair); }
+  .img-badge-box { position: absolute; bottom: -24px; right: -24px; background: var(--rouge); color: white; padding: 24px 28px; border-radius: 8px; text-align: center; box-shadow: 0 8px 30px rgba(192,57,43,.35); }
+  .img-badge-box .big { font-family: var(--font-titre); font-size: 42px; font-weight: 900; line-height: 1; }
+  .img-badge-box .sm { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; opacity: .85; }
+  .apropos-content { padding-right: 20px; }
+  .checks { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
+  .checks li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--ardoise); }
+  .checks li span { flex: 1; line-height: 1.65; }
+  .checks li::before { content: '✓'; flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--rouge); color: white; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; margin-top: 2px; }
 
-/* SERVICES */
-.services-sec{background:var(--bg)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
-.service-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:34px 28px;transition:box-shadow .25s,transform .25s,border-color .25s}
-.service-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.09);transform:translateY(-4px);border-color:var(--accent)}
-.sc-icon{width:52px;height:52px;background:var(--accent-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px;border:1px solid rgba(245,196,0,0.3)}
-.sc-title{font-size:1rem;font-weight:600;color:var(--blue);margin-bottom:9px}
-.sc-desc{font-size:0.86rem;color:var(--muted);line-height:1.7}
-.sc-link{display:inline-flex;align-items:center;gap:5px;margin-top:16px;font-size:0.8rem;font-weight:600;color:var(--accent-dark);text-decoration:none;transition:gap .15s}
-.sc-link:hover{gap:8px}
+  /* ─── REALISATIONS ─── */
+  #realisations { background: var(--clair); }
+  .real-header { text-align: center; margin-bottom: 56px; }
+  .real-header .section-lead { margin: 0 auto; }
+  .real-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1100px; margin: 0 auto; }
+  .real-card { position: relative; border-radius: 6px; overflow: hidden; aspect-ratio: 4/3; background: var(--ardoise2); }
+  .real-card:first-child { grid-column: 1 / 3; aspect-ratio: 16/9; }
+  .real-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s; }
+  .real-card:hover img { transform: scale(1.06); }
+  .real-overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(28,38,48,.8) 0%, transparent 60%); opacity: 0; transition: opacity .3s; display: flex; align-items: flex-end; padding: 20px; }
+  .real-card:hover .real-overlay { opacity: 1; }
+  .real-overlay span { color: white; font-size: 14px; font-weight: 500; }
 
-/* GARANTIES */
-.garanties{background:var(--blue);padding:56px 40px}
-.garanties-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.garantie-item{padding:28px 24px;border-right:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;gap:10px}
-.garantie-item:last-child{border-right:none}
-.garantie-icon{font-size:1.7rem}
-.garantie-title{font-size:0.95rem;font-weight:600;color:var(--white)}
-.garantie-desc{font-size:0.82rem;color:rgba(255,255,255,0.58);line-height:1.65}
+  /* ─── TÉMOIGNAGES ─── */
+  #temoignages { background: var(--ardoise); color: white; }
+  .temo-header { text-align: center; margin-bottom: 56px; }
+  .temo-header .section-title { color: white; }
+  .temo-header .section-lead { color: #90a4ae; margin: 0 auto; }
+  .temo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
+  .temo-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 8px; padding: 32px; }
+  .stars { color: var(--or); font-size: 18px; margin-bottom: 16px; letter-spacing: 2px; }
+  .temo-card p { color: #b0bec5; font-size: 15px; line-height: 1.75; margin-bottom: 20px; font-style: italic; }
+  .temo-author { display: flex; align-items: center; gap: 12px; }
+  .avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--rouge); color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-titre); font-weight: 700; font-size: 16px; flex-shrink: 0; }
+  .author-name { font-weight: 500; color: white; font-size: 14px; }
+  .author-loc { color: #78909C; font-size: 12px; }
 
-.zone-map-real{display:flex;flex-direction:column;gap:10px}
-.map-open-btn{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:9px 16px;font-size:0.82rem;font-weight:600;color:var(--blue);text-decoration:none;transition:border-color .18s,background .18s;width:fit-content}
-.map-open-btn:hover{border-color:var(--accent);background:var(--accent-bg)}
+  /* ─── CONTACT ─── */
+  #contact { background: var(--clair); }
+  .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1100px; margin: 0 auto; align-items: start; }
+  .info-items { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
+  .info-item { display: flex; align-items: flex-start; gap: 16px; }
+  .info-icon { width: 48px; height: 48px; border-radius: 8px; background: var(--rouge); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .info-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gris); font-weight: 600; }
+  .info-val { font-size: 16px; font-weight: 500; color: var(--ardoise); margin-top: 2px; }
+  .info-val a { color: var(--rouge); text-decoration: none; }
+  .info-val a:hover { text-decoration: underline; }
+  .form-card { background: white; border-radius: 8px; box-shadow: 0 4px 30px rgba(0,0,0,.1); padding: 40px; }
+  .form-title { font-family: var(--font-titre); font-size: 24px; font-weight: 700; color: var(--ardoise); margin-bottom: 28px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { margin-bottom: 16px; }
+  label { display: block; font-size: 13px; font-weight: 500; color: var(--ardoise); margin-bottom: 6px; }
+  input, select, textarea { width: 100%; border: 1.5px solid #e2e8f0; border-radius: 6px; padding: 11px 14px; font-size: 15px; font-family: var(--font-corps); color: var(--ardoise); background: white; transition: border-color .2s; outline: none; }
+  input:focus, select:focus, textarea:focus { border-color: var(--rouge); }
+  textarea { resize: vertical; min-height: 110px; }
+  .btn-send { width: 100%; background: var(--rouge); color: white; border: none; cursor: pointer; padding: 15px; border-radius: 6px; font-size: 16px; font-weight: 600; font-family: var(--font-corps); letter-spacing: .5px; transition: background .2s; margin-top: 8px; }
+  .btn-send:hover { background: var(--rouge-dk); }
+  .rgpd { font-size: 11px; color: var(--gris); text-align: center; margin-top: 10px; line-height: 1.5; }
 
-/* ZONE */
-.zone{background:var(--white)}
-.zone-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.zone-map{background:linear-gradient(135deg,#dde6f0,#b8cede);height:360px;border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center}
-.zone-map-pin{font-size:3rem;display:block;margin-bottom:10px}
-.zone-map-label{font-weight:700;font-size:1.1rem;color:var(--blue)}
-.zone-map-sub{font-size:0.82rem;color:var(--mid);margin-top:4px}
-.zone-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 32px}
-.zone-town{display:flex;align-items:center;gap:7px;font-size:0.88rem;color:var(--mid)}
-.zone-town::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0}
+  /* ─── QUALIBAT ─── */
+  .qualibat-strip { background: white; border-top: 3px solid var(--or); padding: 20px 5%; display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+  .qlb-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: var(--ardoise); }
+  .qlb-icon { font-size: 26px; }
 
-/* CONTACT */
-.contact-sec{background:var(--bg)}
-.contact-inner{display:grid;grid-template-columns:5fr 7fr;gap:52px;align-items:start;margin-top:48px}
-.contact-info-box{background:var(--blue);border-radius:8px;padding:36px 32px;display:flex;flex-direction:column;gap:24px}
-.ci-item{display:flex;gap:14px;align-items:flex-start}
-.ci-icon{width:38px;height:38px;background:rgba(255,255,255,0.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.ci-label{font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
-.ci-value{font-size:0.92rem;color:var(--white);font-weight:500}
-.ci-sub{font-size:0.76rem;color:rgba(255,255,255,0.5);margin-top:2px}
-.ci-divider{height:1px;background:rgba(255,255,255,0.1)}
-.hours-table{display:flex;flex-direction:column;gap:7px}
-.hours-row{display:flex;justify-content:space-between;font-size:0.82rem}
-.hours-row span:first-child{color:rgba(255,255,255,0.55)}
-.hours-row span:last-child{color:var(--white);font-weight:500}
-.hours-row.special span:last-child{color:var(--accent)}
-.contact-form-box{background:var(--white);border-radius:8px;padding:36px 32px;border:1px solid var(--border)}
-.form-title{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--blue);margin-bottom:26px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.form-group{display:flex;flex-direction:column;gap:6px}
-.form-group.full{grid-column:1/-1}
-.form-group label{font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid)}
-.form-group input,.form-group select,.form-group textarea{background:var(--bg);border:1.5px solid var(--border);border-radius:5px;padding:11px 13px;font-family:'Outfit',sans-serif;font-size:0.88rem;color:var(--dark);outline:none;transition:border-color .2s;width:100%}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
-.form-group textarea{resize:vertical}
-.form-submit{margin-top:14px;width:100%;justify-content:center;font-size:0.9rem;padding:14px}
+  /* ─── FOOTER ─── */
+  footer { background: var(--ardoise); color: #78909C; padding: 48px 5% 24px; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 12px; max-width: 320px; }
+  .footer-col h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: white; margin-bottom: 20px; font-weight: 600; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a { color: #78909C; text-decoration: none; font-size: 14px; transition: color .2s; }
+  .footer-col ul li a:hover { color: white; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; flex-wrap: wrap; gap: 12px; }
+  .footer-legal { display: flex; gap: 24px; }
+  .footer-legal span { color: #546E7A; }
 
-/* FOOTER */
-footer{background:var(--dark);padding:52px 40px 0}
-.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:52px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,0.08)}
-.footer-logo-name{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--white);margin-bottom:10px}
-.footer-desc{font-size:0.84rem;color:rgba(255,255,255,0.48);line-height:1.75;max-width:300px;margin-bottom:18px}
-.footer-rge{display:inline-flex;align-items:center;gap:7px;background:rgba(245,196,0,0.1);border:1px solid rgba(245,196,0,0.28);padding:6px 13px;border-radius:4px;font-size:0.73rem;font-weight:600;color:var(--accent)}
-.footer-col-title{font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:16px}
-.footer-links-list{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer-links-list a{font-size:0.84rem;color:rgba(255,255,255,0.55);text-decoration:none;transition:color .18s}
-.footer-links-list a:hover{color:var(--accent)}
-.footer-contact-item{display:flex;align-items:flex-start;gap:9px;font-size:0.84rem;color:rgba(255,255,255,0.55);margin-bottom:10px}
-.footer-bottom{max-width:1200px;margin:0 auto;padding:18px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.footer-copy{font-size:0.73rem;color:rgba(255,255,255,0.28)}
-.footer-legal{display:flex;gap:18px;flex-wrap:wrap}
-.footer-legal a{font-size:0.73rem;color:rgba(255,255,255,0.32);text-decoration:none;transition:color .18s}
-.footer-legal a:hover{color:var(--accent)}
+  /* ─── ANIMATIONS ─── */
+  .fade-in { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
+  .fade-in.visible { opacity: 1; transform: none; }
 
-/* MODALS */
-.legal-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s}
-.legal-overlay.open{opacity:1;pointer-events:all}
-.legal-panel{background:var(--white);width:100%;max-width:760px;max-height:90vh;display:flex;flex-direction:column;transform:translateY(30px);transition:transform .35s cubic-bezier(0.23,1,0.32,1);border-radius:8px 8px 0 0}
-.legal-overlay.open .legal-panel{transform:translateY(0)}
-.legal-header{display:flex;align-items:center;justify-content:space-between;padding:20px 26px;border-bottom:1px solid var(--border);flex-shrink:0}
-.legal-title{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--blue)}
-.legal-close{width:34px;height:34px;background:var(--light);border:none;border-radius:50%;font-size:0.82rem;cursor:pointer;color:var(--mid);display:flex;align-items:center;justify-content:center;transition:background .18s,color .18s}
-.legal-close:hover{background:var(--accent);color:#000}
-.legal-body{overflow-y:auto;padding:26px;flex:1}
-.legal-body::-webkit-scrollbar{width:4px}
-.legal-body::-webkit-scrollbar-track{background:var(--bg)}
-.legal-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
-.legal-section{margin-bottom:26px;padding-bottom:26px;border-bottom:1px solid var(--border)}
-.legal-section:last-child{border-bottom:none;margin-bottom:0}
-.legal-section h2{font-size:0.82rem;font-weight:700;color:var(--blue);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.07em}
-.legal-section p{font-size:0.86rem;color:var(--mid);line-height:1.75;margin-bottom:8px}
-.legal-section p:last-child{margin-bottom:0}
-.legal-section ul{list-style:none;display:flex;flex-direction:column;gap:6px;margin-top:8px}
-.legal-section ul li{font-size:0.86rem;color:var(--mid);line-height:1.65;padding-left:16px;position:relative}
-.legal-section ul li::before{content:'›';position:absolute;left:0;color:var(--accent-dark);font-weight:700}
+  /* ─── RESPONSIVE ─── */
+  /* ─── BURGER & MENU MOBILE ─── */
+  .burger span {
+    display: block; width: 24px; height: 2px;
+    background: white; border-radius: 2px;
+    transition: transform .35s ease, opacity .25s ease, width .25s ease;
+    transform-origin: center;
+  }
+  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; width: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Cookie rows */
-.cookie-row{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:16px 0;border-bottom:1px solid var(--border)}
-.cookie-row:last-of-type{border-bottom:none}
-.cookie-name{font-size:0.88rem;font-weight:600;color:var(--dark);margin-bottom:4px}
-.cookie-badge{font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap;flex-shrink:0}
-.always-on{background:#e8f5e9;color:#2e7d32}
-.always-off{background:var(--light);color:var(--muted)}
-.toggle-switch{flex-shrink:0;cursor:pointer;margin-top:2px}
-.toggle-switch input{display:none}
-.toggle-track{width:44px;height:24px;background:var(--border);border-radius:12px;position:relative;transition:background .25s}
-.toggle-switch input:checked+.toggle-track{background:var(--blue)}
-.toggle-thumb{position:absolute;top:3px;left:3px;width:18px;height:18px;background:white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,0.2);transition:transform .25s cubic-bezier(0.23,1,0.32,1)}
-.toggle-switch input:checked+.toggle-track .toggle-thumb{transform:translateX(20px)}
-.cookie-modal-actions{display:flex;gap:9px;margin-top:22px;flex-wrap:wrap}
-.btn-sm{font-family:'Outfit',sans-serif;font-size:0.78rem;font-weight:600;padding:9px 17px;border-radius:4px;cursor:pointer;border:none;transition:all .18s}
-.btn-sm-primary{background:var(--blue);color:white}
-.btn-sm-primary:hover{background:#152840}
-.btn-sm-outline{background:transparent;color:var(--mid);border:1px solid var(--border)}
-.btn-sm-outline:hover{border-color:var(--mid);color:var(--dark)}
+  .menu-overlay {
+    display: none;
+    position: fixed; inset: 0; z-index: 998;
+    background: rgba(0,0,0,.5);
+  }
+  .menu-overlay.active { display: block; }
 
-/* COOKIE BANNER */
-.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:400;background:var(--white);border-top:3px solid var(--accent);box-shadow:0 -4px 24px rgba(0,0,0,0.12);padding:18px 40px;transform:translateY(100%);transition:transform .4s cubic-bezier(0.23,1,0.32,1)}
-.cookie-banner.visible{transform:translateY(0)}
-.cookie-banner-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
-.cookie-banner-text{display:flex;align-items:flex-start;gap:12px;flex:1;min-width:260px}
-.cookie-banner-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
-.cookie-banner-text strong{display:block;font-size:0.9rem;color:var(--dark);margin-bottom:3px}
-.cookie-banner-text p{font-size:0.77rem;color:var(--muted);line-height:1.55}
-.cookie-banner-actions{display:flex;gap:9px;flex-shrink:0;flex-wrap:wrap}
-.cbtn{font-family:'Outfit',sans-serif;font-size:0.79rem;font-weight:600;padding:10px 19px;border-radius:4px;cursor:pointer;border:none;white-space:nowrap;transition:all .18s}
-.cbtn-settings{background:var(--bg);color:var(--mid);border:1px solid var(--border)}
-.cbtn-settings:hover{border-color:var(--mid)}
-.cbtn-refuse{background:var(--light);color:var(--dark)}
-.cbtn-refuse:hover{background:var(--border)}
-.cbtn-accept{background:var(--accent);color:#000}
-.cbtn-accept:hover{background:var(--accent-dark)}
+  .nav-cta-mobile { display: none; }
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
+  @media (max-width: 900px) {
+    .burger { display: flex; }
+    .nav-cta-desktop { display: none; }
+    .nav-cta-mobile { display: block; margin-top: 8px; }
 
-/* RESPONSIVE */
-@media(max-width:1024px){
-  .services-grid{grid-template-columns:repeat(2,1fr)}
-  .garanties-grid{grid-template-columns:repeat(2,1fr)}
-  .garantie-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1)}
-  .garantie-item:nth-child(3),.garantie-item:nth-child(4){border-bottom:none}
-}
-@media(max-width:900px){
-  .topbar{padding:8px 20px}
-  .topbar-left .topbar-item:nth-child(2){display:none}
-  .topbar-badge{display:none}
-  .nav-inner{padding:0 20px}
-  .nav-links,.nav-cta-btn{display:none}
-  .burger{display:flex}
-  .mobile-menu{display:flex}
-  section{padding:56px 20px}
-  .hero-content{padding:80px 20px 120px}
-  .hero h1{font-size:clamp(1.9rem,7vw,2.8rem)}
-  .hero-actions{flex-direction:column}
-  .btn-primary,.btn-outline{width:100%;justify-content:center}
-  .hero-stats-inner{grid-template-columns:repeat(2,1fr);padding:0 20px}
-  .hero-stat:nth-child(2){border-right:none}
-  .hero-stat:nth-child(3){border-top:1px solid var(--border)}
-  .hero-stat:nth-child(4){border-top:1px solid var(--border);border-right:none}
-  .presentation-inner{grid-template-columns:1fr;gap:40px}
-  .pres-img-wrap{order:-1}
-  .pres-img-wrap img{height:280px}
-  .pres-badge{right:8px;bottom:-14px;width:86px;height:86px}
-  .pres-badge-num{font-size:1.3rem}
-  .pres-content{padding-right:0}
-  .services-grid{grid-template-columns:1fr;gap:14px}
-  .garanties{padding:36px 20px}
-  .garanties-grid{grid-template-columns:1fr 1fr}
-  .zone-inner{grid-template-columns:1fr;gap:28px}
-  .zone-map-real iframe{height:220px}
-  .contact-inner{grid-template-columns:1fr;gap:20px}
-  .form-grid{grid-template-columns:1fr}
-  .form-group.full{grid-column:auto}
-  .footer-grid{grid-template-columns:1fr;gap:28px}
-  .footer-bottom{flex-direction:column;align-items:center;text-align:center}
-  footer{padding:36px 20px 0}
-  .cookie-banner{padding:14px 20px}
-  .cookie-banner-inner{flex-direction:column;gap:12px}
-  .cookie-banner-actions{width:100%;justify-content:stretch}
-  .cbtn{flex:1;text-align:center}
-  .legal-panel{border-radius:8px 8px 0 0}
-  .legal-header{padding:16px 18px}
-  .legal-body{padding:18px}
-  .cookie-row{flex-direction:column;gap:10px}
-}
-@media(max-width:480px){
-  .garanties-grid{grid-template-columns:1fr}
-  .zone-list{grid-template-columns:1fr}
-}
+    /* Sur mobile : le menu est caché à droite par défaut */
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0; right: 0;
+      width: min(300px, 80vw);
+      height: 100dvh;
+      background: #1C2630;
+      border-left: 2px solid var(--rouge);
+      padding: 90px 32px 40px;
+      gap: 0;
+      z-index: 999;
+      transform: translateX(100%);
+      transition: transform .35s cubic-bezier(.4,0,.2,1);
+      overflow-y: auto;
+      list-style: none;
+    }
+    .nav-links.open { transform: translateX(0); }
+
+    .nav-links li { border-bottom: 1px solid rgba(255,255,255,.07); }
+    .nav-links a {
+      display: block;
+      padding: 16px 0;
+      font-size: 15px; letter-spacing: 1.5px;
+      color: #ccc; text-transform: uppercase; font-weight: 500;
+    }
+    .nav-links a:hover { color: var(--or); }
+
+    .nav-cta-link {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--rouge); color: white !important;
+      padding: 13px 28px; border-radius: 4px;
+      text-decoration: none; font-weight: 500; font-size: 14px;
+      letter-spacing: .5px; transition: background .2s;
+      text-transform: none;
+    }
+    .nav-cta-link:hover { background: var(--rouge-dk); }
+
+    #apropos { grid-template-columns: 1fr; gap: 40px; padding: 60px 5%; }
+    .apropos-content { padding: 0; }
+    .img-badge-box { right: 0; bottom: -20px; }
+    .contact-wrap { grid-template-columns: 1fr; gap: 40px; }
+    .real-grid { grid-template-columns: 1fr 1fr; }
+    .real-card:first-child { grid-column: 1/3; }
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    .form-row { grid-template-columns: 1fr; }
+
+    /* Fix checks : texte propre sur mobile */
+    .checks li {
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .checks li::before {
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+  }
+  @media (max-width: 600px) {
+    .real-grid { grid-template-columns: 1fr; }
+    .real-card:first-child { grid-column: 1/2; aspect-ratio: 4/3; }
+    .hero-stats { gap: 24px; }
+    .certif-band { gap: 20px; }
+    section { padding: 60px 5%; }
+  }
 </style>
 </head>
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar">
-  <div class="topbar-left">
-    <div class="topbar-item">📍 96 Rue du Verger-Soreau, 49400 Saumur</div>
-    <div class="topbar-item">🕐 Lun–Sam 8h–19h · Dim 9h–12h</div>
-  </div>
-  <div style="display:flex;align-items:center;gap:14px">
-    <span class="topbar-badge">⚡ Dépannage 7j/7</span>
-    <a href="tel:0672614567" class="topbar-phone">📞 06 72 61 45 67</a>
-  </div>
-</div>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <ul class="mobile-nav-links">
-    <li><a href="#presentation" class="mobile-link">L'entreprise</a></li>
-    <li><a href="#services" class="mobile-link">Prestations</a></li>
-    <li><a href="#zone" class="mobile-link">Zone d'intervention</a></li>
-    <li><a href="#contact" class="mobile-link">Contact</a></li>
-  </ul>
-  <a href="#contact" class="mobile-menu-cta mobile-link">Demander un devis gratuit</a>
-  <a href="tel:0672614567" class="mobile-menu-phone">📞 06 72 61 45 67</a>
-</div>
-
 <!-- NAV -->
 <nav>
-  <div class="nav-inner">
-    <div>
-      <div class="nav-logo-name">R.BEGUIN</div>
-      <div class="nav-logo-sub">Électricité · Saumur</div>
+  <a href="#" class="logo">
+    <div class="logo-badge">A²C</div>
+    <div class="logo-text">
+      A2C Bâtiment
+      <span>Couverture · Étanchéité · Bâtiment</span>
     </div>
-    <ul class="nav-links">
-      <li><a href="#presentation">L'entreprise</a></li>
-      <li><a href="#services">Prestations</a></li>
-      <li><a href="#zone">Zone d'intervention</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta-btn">📋 Devis gratuit</a>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
+  </a>
+  <a href="#contact" class="nav-cta nav-cta-desktop">Devis gratuit</a>
+  <button class="burger" id="burgerBtn" onclick="toggleMenu()" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<!-- Menu mobile (hors nav pour éviter le contexte de composition de backdrop-filter) -->
+<ul class="nav-links" id="navLinks">
+  <li><a href="#services" onclick="closeMenu()">Nos services</a></li>
+  <li><a href="#apropos" onclick="closeMenu()">À propos</a></li>
+  <li><a href="#realisations" onclick="closeMenu()">Réalisations</a></li>
+  <li><a href="#temoignages" onclick="closeMenu()">Avis clients</a></li>
+  <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+  <li class="nav-cta-mobile"><a href="#contact" class="nav-cta-link" onclick="closeMenu()">Devis gratuit</a></li>
+</ul>
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
+<section class="hero" id="accueil">
+  <img
+    class="hero-img"
+    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80"
+    alt="Chantier couverture"
+    loading="eager"
+  >
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-tag">⚡ Électricien certifié RGE — Saumur (49)</div>
-    <h1>Votre électricien de <span>confiance</span> à Saumur</h1>
-    <p class="hero-desc">Particuliers et professionnels — installation, dépannage, climatisation, automatismes et domotique. Intervention rapide dans tout le Saumurois.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">📋 Demander un devis gratuit</a>
-      <a href="tel:0672614567" class="btn-outline">📞 06 72 61 45 67</a>
+    <div class="hero-badge">Certifié Qualibat RGE</div>
+    <h1>L'artisan du<br>toit à <em>Vierzon</em></h1>
+    <p>Couverture, étanchéité, charpente, rénovation complète de bâtiment — A2C Bâtiment intervient chez vous dans le Cher et toute la région Centre-Val de Loire.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Demander un devis</a>
+      <a href="tel:0248521488" class="btn-outline">☎ 02 48 52 14 88</a>
     </div>
-  </div>
-  <div class="hero-stats">
-    <div class="hero-stats-inner">
-      <div class="hero-stat"><div class="stat-icon">⚡</div><div><div class="stat-num">7j/7</div><div class="stat-lbl">Dépannage disponible</div></div></div>
-      <div class="hero-stat"><div class="stat-icon">🏆</div><div><div class="stat-num">RGE</div><div class="stat-lbl">Certifié & qualifié</div></div></div>
-      <div class="hero-stat"><div class="stat-icon">📋</div><div><div class="stat-num">Gratuit</div><div class="stat-lbl">Devis sans engagement</div></div></div>
-      <div class="hero-stat"><div class="stat-icon">👷</div><div><div class="stat-num">Particuliers & Pros</div><div class="stat-lbl">Tous types de chantiers</div></div></div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-n">+5 ans</div>
+        <div class="stat-l">D'expérience</div>
+      </div>
+      <div>
+        <div class="stat-n">320K€</div>
+        <div class="stat-l">De chantiers réalisés</div>
+      </div>
+      <div>
+        <div class="stat-n">RGE</div>
+        <div class="stat-l">Certifié Qualibat</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PRESENTATION -->
-<section class="presentation" id="presentation">
-  <div class="container">
-    <div class="presentation-inner">
-      <div class="pres-img-wrap reveal">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Électricien R.BEGUIN Saumur">
-        <div class="pres-badge">
-          <div class="pres-badge-num">RGE</div>
-          <div class="pres-badge-txt">Certifié</div>
-        </div>
-      </div>
-      <div class="pres-content reveal" style="transition-delay:.12s">
-        <div class="section-tag">L'entreprise</div>
-        <h2 class="section-title">Un artisan à l'écoute de vos projets</h2>
-        <p class="section-sub">R.BEGUIN est votre électricien de proximité à Saumur. J'interviens aussi bien chez les particuliers que les professionnels pour tous vos travaux d'électricité, en neuf ou en rénovation.</p>
-        <ul class="pres-list">
-          <li><div class="pres-check">✓</div><span>Devis détaillé et gratuit avant chaque intervention</span></li>
-          <li><div class="pres-check">✓</div><span>Travaux réalisés selon la norme NF C 15-100</span></li>
-          <li><div class="pres-check">✓</div><span>Dépannage rapide 7 jours sur 7, sans frais cachés</span></li>
-          <li><div class="pres-check">✓</div><span>Conseils personnalisés sur tous vos projets électriques</span></li>
-          <li><div class="pres-check">✓</div><span>Qualification RGE pour l'accès aux aides de l'État</span></li>
-        </ul>
-        <div class="rge-inline">🏅 Reconnu Garant de l'Environnement — MaPrimeRénov' éligible</div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- CERTIF BAND -->
+<div class="certif-band">
+  <div class="certif-item"><span class="certif-icon">🏅</span> Qualibat RGE certifié</div>
+  <div class="certif-item"><span class="certif-icon">📋</span> Devis gratuit & rapide</div>
+  <div class="certif-item"><span class="certif-icon">🔧</span> Garantie décennale</div>
+  <div class="certif-item"><span class="certif-icon">🌍</span> Éco-artisan</div>
+</div>
 
 <!-- SERVICES -->
-<section class="services-sec" id="services">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-tag">Nos prestations</div>
-      <h2 class="section-title">Des solutions pour tous vos projets</h2>
-      <p class="section-sub">Du dépannage d'urgence à la rénovation complète, R.BEGUIN accompagne particuliers et professionnels dans tout le Saumurois.</p>
+<section id="services">
+  <div class="services-header fade-in">
+    <p class="section-tag">Ce que nous faisons</p>
+    <h2 class="section-title">Nos expertises</h2>
+    <p class="section-lead">De la réfection complète de toiture à l'isolation des combles, en passant par l'étanchéité et la rénovation de façade — une seule entreprise pour tous vos travaux.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card fade-in">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Couverture et toiture" loading="lazy">
+        <div class="service-num">01</div>
+      </div>
+      <div class="service-body">
+        <h3>Couverture & Toiture</h3>
+        <p>Pose, réfection et entretien de tous types de toitures : tuiles, ardoises, zinc, bac acier. Nous intervenons sur tous les immeubles résidentiels et tertiaires.</p>
+        <div class="service-tags">
+          <span class="tag">Tuiles</span><span class="tag">Ardoises</span><span class="tag">Zinc</span><span class="tag">Bac acier</span>
+        </div>
+      </div>
     </div>
-    <div class="services-grid">
-      <div class="service-card reveal"><div class="sc-icon">⚡</div><div class="sc-title">Installation électrique</div><p class="sc-desc">Tableaux électriques, câblage, prises, interrupteurs et éclairage — en construction neuve ou rénovation, aux normes NF C 15-100.</p><a href="#contact" class="sc-link">Demander un devis →</a></div>
-      <div class="service-card reveal" style="transition-delay:.08s"><div class="sc-icon">🔧</div><div class="sc-title">Dépannage d'urgence</div><p class="sc-desc">Panne électrique, disjoncteur, court-circuit — intervention rapide 7 jours sur 7 pour particuliers et professionnels.</p><a href="tel:0672614567" class="sc-link">Appeler maintenant →</a></div>
-      <div class="service-card reveal" style="transition-delay:.16s"><div class="sc-icon">❄️</div><div class="sc-title">Climatisation</div><p class="sc-desc">Fourniture et installation de systèmes de climatisation réversibles pour un confort thermique optimal toute l'année.</p><a href="#contact" class="sc-link">Demander un devis →</a></div>
-      <div class="service-card reveal"><div class="sc-icon">🚪</div><div class="sc-title">Automatisme de portail</div><p class="sc-desc">Motorisation de portails coulissants ou battants, télécommandes, visiophone et contrôle d'accès. Sécurisez votre propriété.</p><a href="#contact" class="sc-link">Demander un devis →</a></div>
-      <div class="service-card reveal" style="transition-delay:.08s"><div class="sc-icon">🏠</div><div class="sc-title">Domotique</div><p class="sc-desc">Gestion intelligente de l'éclairage, des volets et du chauffage. Rendez votre habitation connectée pour plus de confort.</p><a href="#contact" class="sc-link">Demander un devis →</a></div>
-      <div class="service-card reveal" style="transition-delay:.16s"><div class="sc-icon">💻</div><div class="sc-title">Câblage réseau & informatique</div><p class="sc-desc">Prises RJ45, câblage informatique et infrastructure réseau pour bureaux, commerces et logements collectifs.</p><a href="#contact" class="sc-link">Demander un devis →</a></div>
+
+    <div class="service-card fade-in">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Étanchéité" loading="lazy">
+        <div class="service-num">02</div>
+      </div>
+      <div class="service-body">
+        <h3>Étanchéité</h3>
+        <p>Traitement des toits plats, terrasses, balcons et fondations. Membranes bitumineuses, résines ou EPDM — nous choisissons la solution adaptée à votre bâtiment.</p>
+        <div class="service-tags">
+          <span class="tag">Toits plats</span><span class="tag">Terrasses</span><span class="tag">Bitume</span><span class="tag">EPDM</span>
+        </div>
+      </div>
     </div>
+
+    <div class="service-card fade-in">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="Charpente et gros oeuvre" loading="lazy">
+        <div class="service-num">03</div>
+      </div>
+      <div class="service-body">
+        <h3>Charpente & Gros œuvre</h3>
+        <p>Construction, réparation et renforcement de charpentes en bois. Maçonnerie, gros œuvre, ravalement — nous gérons l'ensemble de votre projet de bâtiment.</p>
+        <div class="service-tags">
+          <span class="tag">Charpente bois</span><span class="tag">Maçonnerie</span><span class="tag">Ravalement</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80" alt="Isolation thermique" loading="lazy">
+        <div class="service-num">04</div>
+      </div>
+      <div class="service-body">
+        <h3>Isolation & Fenêtres</h3>
+        <p>Isolation thermique des combles, des murs et des planchers. Pose de fenêtres de toit VELUX et fenêtres extérieures. Travaux éligibles aux aides MaPrimeRénov'.</p>
+        <div class="service-tags">
+          <span class="tag">Combles</span><span class="tag">VELUX</span><span class="tag">MaPrimeRénov'</span><span class="tag">RGE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Rénovation intérieure" loading="lazy">
+        <div class="service-num">05</div>
+      </div>
+      <div class="service-body">
+        <h3>Rénovation complète</h3>
+        <p>Plâtrerie, carrelage, peinture, plomberie, menuiseries intérieures et extérieures. A2C Bâtiment est votre interlocuteur unique pour toute rénovation.</p>
+        <div class="service-tags">
+          <span class="tag">Peinture</span><span class="tag">Carrelage</span><span class="tag">Plomberie</span><span class="tag">Menuiserie</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card fade-in">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Marchés publics" loading="lazy">
+        <div class="service-num">06</div>
+      </div>
+      <div class="service-body">
+        <h3>Marchés publics</h3>
+        <p>Titulaire de plusieurs accords-cadres avec l'État et les collectivités en région Centre-Val de Loire pour l'entretien et la rénovation des bâtiments publics.</p>
+        <div class="service-tags">
+          <span class="tag">Collectivités</span><span class="tag">OPH</span><span class="tag">Bâtiments publics</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- GARANTIES -->
-<div class="garanties">
-  <div class="garanties-grid">
-    <div class="garantie-item reveal"><div class="garantie-icon">📋</div><div class="garantie-title">Devis gratuit</div><p class="garantie-desc">Un devis complet et détaillé vous est remis avant chaque intervention, sans engagement.</p></div>
-    <div class="garantie-item reveal" style="transition-delay:.08s"><div class="garantie-icon">🛡️</div><div class="garantie-title">Travaux garantis</div><p class="garantie-desc">Toutes les installations sont réalisées dans les règles de l'art et conformes aux normes en vigueur.</p></div>
-    <div class="garantie-item reveal" style="transition-delay:.16s"><div class="garantie-icon">⚡</div><div class="garantie-title">Réactivité 7j/7</div><p class="garantie-desc">Dépannage disponible tous les jours. Votre urgence est notre priorité absolue.</p></div>
-    <div class="garantie-item reveal" style="transition-delay:.24s"><div class="garantie-icon">💬</div><div class="garantie-title">Conseils personnalisés</div><p class="garantie-desc">Artisan à votre écoute, je vous guide vers les meilleures solutions pour votre budget.</p></div>
+<!-- À PROPOS -->
+<div id="apropos">
+  <div class="apropos-img-stack fade-in">
+    <img
+      class="img-main"
+      src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=800&q=80"
+      alt="Artisan couvreur au travail"
+      loading="lazy"
+    >
+    <div class="img-badge-box">
+      <div class="big">2019</div>
+      <div class="sm">Fondée</div>
+    </div>
+  </div>
+  <div class="apropos-content fade-in">
+    <p class="section-tag">Qui sommes-nous</p>
+    <h2 class="section-title">Une entreprise de confiance depuis 2019</h2>
+    <p class="section-lead">
+      A2C Bâtiment est une SARL créée à Vierzon (Cher) en décembre 2019, dirigée par <strong>Yahya Atasever</strong>. Spécialisée dans les travaux de couverture, d'étanchéité et de bâtiment, l'entreprise intervient auprès des particuliers, des bailleurs sociaux et des collectivités.
+    </p>
+    <ul class="checks">
+      <li><span>Certification <strong>Qualibat RGE</strong> — éligibilité aux aides de l'État pour vos travaux d'isolation</span></li>
+      <li><span>Titulaire d'<strong>accords-cadres avec l'État</strong> en Centre-Val de Loire (Cher, Loir-et-Cher, Loiret)</span></li>
+      <li><span>Chantiers réalisés pour l'<strong>Office Public de l'Habitat</strong> de Loir-et-Cher</span></li>
+      <li><span>Garantie <strong>décennale</strong> sur tous nos ouvrages</span></li>
+      <li><span>Intervention rapide sur Vierzon et dans un rayon de <strong>80 km</strong></span></li>
+    </ul>
   </div>
 </div>
 
-<!-- ZONE -->
-<section class="zone" id="zone">
-  <div class="container">
-    <div class="zone-inner">
-      <div class="reveal">
-        <div class="section-tag">Zone d'intervention</div>
-        <h2 class="section-title">Saumur et ses environs</h2>
-        <p class="section-sub">Basé à Saumur, j'interviens dans tout le Saumurois et les communes alentours pour tous vos travaux d'électricité.</p>
-        <div class="zone-list">
-          <div class="zone-town">Saumur</div>
-          <div class="zone-town">Saint-Lambert-des-Levées</div>
-          <div class="zone-town">Doué-en-Anjou</div>
-          <div class="zone-town">Longué-Jumelles</div>
-          <div class="zone-town">Baugé-en-Anjou</div>
-          <div class="zone-town">Montreuil-Bellay</div>
-          <div class="zone-town">Bourgueil</div>
-          <div class="zone-town">Fontevraud-l'Abbaye</div>
-        </div>
-        <a href="#contact" class="btn-primary" style="width:fit-content">Me contacter pour ma zone →</a>
+<!-- RÉALISATIONS -->
+<section id="realisations">
+  <div class="real-header fade-in">
+    <p class="section-tag">Notre travail</p>
+    <h2 class="section-title">Quelques réalisations</h2>
+    <p class="section-lead">Des chantiers résidentiels aux bâtiments publics, notre savoir-faire s'adapte à chaque projet.</p>
+  </div>
+  <div class="real-grid fade-in">
+    <div class="real-card">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Réfection toiture complète" loading="lazy">
+      <div class="real-overlay"><span>Réfection de toiture — Vierzon</span></div>
+    </div>
+    <div class="real-card">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Pose ardoises" loading="lazy">
+      <div class="real-overlay"><span>Pose ardoises naturelles</span></div>
+    </div>
+    <div class="real-card">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="Charpente bois" loading="lazy">
+      <div class="real-overlay"><span>Charpente bois neuve</span></div>
+    </div>
+    <div class="real-card">
+      <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80" alt="Isolation combles" loading="lazy">
+      <div class="real-overlay"><span>Isolation combles perdus</span></div>
+    </div>
+    <div class="real-card">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Bâtiment public" loading="lazy">
+      <div class="real-overlay"><span>Marché public — Blois (41)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section id="temoignages">
+  <div class="temo-header fade-in">
+    <p class="section-tag" style="color:#e8837a">Ils nous font confiance</p>
+    <h2 class="section-title">Avis de nos clients</h2>
+    <p class="section-lead">La satisfaction de nos clients est notre meilleure carte de visite.</p>
+  </div>
+  <div class="temo-grid fade-in">
+    <div class="temo-card">
+      <div class="stars">★★★★★</div>
+      <p>"Intervention rapide après une fuite sur ma toiture. Travail soigné, tarif honnête et équipe sérieuse. Je recommande vivement A2C Bâtiment sans hésiter."</p>
+      <div class="temo-author">
+        <div class="avatar">MH</div>
+        <div><div class="author-name">Marie-Hélène D.</div><div class="author-loc">Vierzon (18)</div></div>
       </div>
-      <div class="zone-map-real reveal" style="transition-delay:.12s">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.0!2d-0.0778!3d47.2633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s96+Rue+du+Verger+Soreau%2C+49400+Saumur!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr&q=96+Rue+du+Verger+Soreau,+49400+Saumur,+France"
-          width="100%"
-          height="380"
-          style="border:0;border-radius:8px;display:block;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Localisation R.BEGUIN — 96 Rue du Verger-Soreau, 49400 Saumur">
-        </iframe>
-        <a href="https://maps.google.com/?q=96+Rue+du+Verger+Soreau,+49400+Saumur" target="_blank" rel="noopener" class="map-open-btn">
-          📍 Ouvrir dans Google Maps
-        </a>
+    </div>
+    <div class="temo-card">
+      <div class="stars">★★★★★</div>
+      <p>"Nous avons fait appel à A2C pour la réfection complète de notre toiture et l'isolation des combles. Chantier propre, délais respectés. Très satisfaits du résultat."</p>
+      <div class="temo-author">
+        <div class="avatar">PB</div>
+        <div><div class="author-name">Patrick B.</div><div class="author-loc">Mehun-sur-Yèvre (18)</div></div>
+      </div>
+    </div>
+    <div class="temo-card">
+      <div class="stars">★★★★★</div>
+      <p>"Professionnels, ponctuels et à l'écoute. L'étanchéité de notre terrasse a été refaite en deux jours, aucun problème depuis. Merci à toute l'équipe !"</p>
+      <div class="temo-author">
+        <div class="avatar">AL</div>
+        <div><div class="author-name">Arnaud L.</div><div class="author-loc">Bourges (18)</div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact-sec" id="contact">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-tag">Contact</div>
-      <h2 class="section-title">Demandez un devis gratuit</h2>
-      <p class="section-sub">Décrivez votre projet, je vous recontacte rapidement pour convenir d'un rendez-vous.</p>
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="contact-info fade-in">
+      <p class="section-tag">Nous contacter</p>
+      <h2 class="section-title">Demandez votre devis gratuit</h2>
+      <p class="section-lead">Réponse sous 24 h. Déplacement et estimation sans engagement dans tout le Cher et les départements voisins.</p>
+      <div class="info-items">
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div><div class="info-label">Adresse</div><div class="info-val">8 Rue du Bas de Grange<br>18100 Vierzon</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div><div class="info-label">Téléphone</div><div class="info-val"><a href="tel:0248521488">02 48 52 14 88</a></div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🏢</div>
+          <div><div class="info-label">Informations légales</div><div class="info-val">SARL au capital de 20 000 €<br>SIRET : 879 617 447 00013<br>N° TVA : FR42 879 617 447</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✅</div>
+          <div><div class="info-label">Certifications</div><div class="info-val">Qualibat RGE · Garantie décennale<br>Code NAF 4391B</div></div>
+        </div>
+      </div>
     </div>
-    <div class="contact-inner">
-      <div class="contact-info-box reveal">
-        <div class="ci-item">
-          <div class="ci-icon">📞</div>
-          <div><div class="ci-label">Téléphone</div><a href="tel:0672614567" class="ci-value" style="text-decoration:none;color:white">06 72 61 45 67</a><div class="ci-sub">Dépannage 7j/7</div></div>
-        </div>
-        <div class="ci-divider"></div>
-        <div class="ci-item">
-          <div class="ci-icon">📍</div>
-          <div><div class="ci-label">Adresse</div><div class="ci-value">96 Rue du Verger-Soreau</div><div class="ci-sub">49400 Saumur (Maine-et-Loire)</div></div>
-        </div>
-        <div class="ci-divider"></div>
-        <div><div class="ci-label" style="margin-bottom:12px">Horaires</div>
-          <div class="hours-table">
-            <div class="hours-row"><span>Lun — Vendredi</span><span>08h00 – 19h00</span></div>
-            <div class="hours-row"><span>Samedi</span><span>08h00 – 19h00</span></div>
-            <div class="hours-row"><span>Dimanche</span><span>09h00 – 12h00</span></div>
-            <div class="hours-row special"><span>Dépannage</span><span>7 jours / 7</span></div>
-          </div>
-        </div>
-        <div class="ci-divider"></div>
-        <div><div class="ci-label" style="margin-bottom:8px">Informations légales</div><div class="ci-sub" style="line-height:1.85">SIRET : 984 919 415 00013<br>SIREN : 984 919 415<br>Code APE : 4321A</div></div>
+    <div class="form-card fade-in">
+      <p class="form-title">Votre projet en quelques mots</p>
+      <div class="form-row">
+        <div class="form-group"><label for="prenom">Prénom *</label><input type="text" id="prenom" placeholder="Jean"></div>
+        <div class="form-group"><label for="nom">Nom *</label><input type="text" id="nom" placeholder="Dupont"></div>
       </div>
-      <div class="contact-form-box reveal" style="transition-delay:.12s">
-        <div class="form-title">Envoyez votre demande</div>
-        <div class="form-grid">
-          <div class="form-group"><label>Prénom *</label><input type="text" placeholder="Jean"></div>
-          <div class="form-group"><label>Nom *</label><input type="text" placeholder="Dupont"></div>
-          <div class="form-group"><label>Téléphone *</label><input type="tel" placeholder="06 xx xx xx xx"></div>
-          <div class="form-group"><label>Code postal</label><input type="text" placeholder="49400"></div>
-          <div class="form-group full"><label>Type de prestation</label>
-            <select><option value="" disabled selected>Sélectionnez…</option><option>Installation électrique</option><option>Dépannage d'urgence</option><option>Climatisation</option><option>Automatisme de portail</option><option>Domotique</option><option>Câblage réseau</option><option>Autre</option></select>
-          </div>
-          <div class="form-group full"><label>Votre message</label><textarea rows="5" placeholder="Décrivez votre projet ou votre besoin…"></textarea></div>
-        </div>
-        <button type="button" class="btn-primary form-submit">Envoyer ma demande →</button>
+      <div class="form-group"><label for="tel">Téléphone *</label><input type="tel" id="tel" placeholder="06 XX XX XX XX"></div>
+      <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="jean.dupont@email.com"></div>
+      <div class="form-group">
+        <label for="service">Type de travaux *</label>
+        <select id="service">
+          <option value="">— Choisir une prestation —</option>
+          <option>Couverture / Toiture</option>
+          <option>Étanchéité</option>
+          <option>Charpente</option>
+          <option>Isolation</option>
+          <option>Fenêtres / VELUX</option>
+          <option>Rénovation complète</option>
+          <option>Autre</option>
+        </select>
       </div>
+      <div class="form-group"><label for="message">Description du projet</label><textarea id="message" placeholder="Décrivez votre projet, la surface approximative, l'urgence..."></textarea></div>
+      <button class="btn-send" onclick="handleSend()">Envoyer ma demande de devis →</button>
+      <p class="rgpd">Vos données sont utilisées uniquement pour répondre à votre demande de devis. Aucune transmission à des tiers.</p>
     </div>
   </div>
 </section>
 
+<!-- QUALIBAT STRIP -->
+<div class="qualibat-strip">
+  <div class="qlb-item"><span class="qlb-icon">🏆</span> Qualibat RGE</div>
+  <div class="qlb-item"><span class="qlb-icon">🛡️</span> Garantie décennale</div>
+  <div class="qlb-item"><span class="qlb-icon">💰</span> Éligible MaPrimeRénov'</div>
+  <div class="qlb-item"><span class="qlb-icon">📐</span> Devis gratuit & sans engagement</div>
+  <div class="qlb-item"><span class="qlb-icon">⚡</span> Intervention rapide</div>
+</div>
+
 <!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
-    <div>
-      <div class="footer-logo-name">R.BEGUIN</div>
-      <p class="footer-desc">Électricien à Saumur, au service des particuliers et des professionnels. Installations électriques, dépannage, climatisation et domotique dans tout le Saumurois.</p>
-      <div class="footer-rge">🏅 Certifié RGE — Reconnu Garant de l'Environnement</div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo" style="margin-bottom:16px;">
+        <div class="logo-badge" style="width:38px;height:38px;font-size:15px;">A²C</div>
+        <div class="logo-text">A2C Bâtiment</div>
+      </div>
+      <p>Entreprise de couverture, étanchéité et bâtiment basée à Vierzon (Cher). Interventions en région Centre-Val de Loire. Certifiée Qualibat RGE.</p>
     </div>
-    <div>
-      <div class="footer-col-title">Navigation</div>
-      <ul class="footer-links-list">
-        <li><a href="#presentation">L'entreprise</a></li>
-        <li><a href="#services">Nos prestations</a></li>
-        <li><a href="#zone">Zone d'intervention</a></li>
-        <li><a href="#contact">Contact & Devis</a></li>
+    <div class="footer-col">
+      <h4>Nos services</h4>
+      <ul>
+        <li><a href="#services">Couverture & Toiture</a></li>
+        <li><a href="#services">Étanchéité</a></li>
+        <li><a href="#services">Charpente</a></li>
+        <li><a href="#services">Isolation</a></li>
+        <li><a href="#services">Rénovation</a></li>
       </ul>
     </div>
-    <div>
-      <div class="footer-col-title">Contact</div>
-      <div class="footer-contact-item"><span>📞</span><a href="tel:0672614567" style="color:rgba(255,255,255,0.55);text-decoration:none">06 72 61 45 67</a></div>
-      <div class="footer-contact-item"><span>📍</span><span>96 Rue du Verger-Soreau<br>49400 Saumur</span></div>
-      <div class="footer-contact-item"><span>🕐</span><span>Lun–Sam 8h–19h · Dim 9h–12h</span></div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:0248521488">02 48 52 14 88</a></li>
+        <li><a href="#contact">Demander un devis</a></li>
+        <li><a href="#">8 Rue du Bas de Grange</a></li>
+        <li><a href="#">18100 Vierzon</a></li>
+      </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2025 R.BEGUIN — Électricité Générale à Saumur (49)</div>
+    <span>© 2025 A2C Bâtiment — SARL au capital de 20 000 € — SIRET 879 617 447 00013</span>
     <div class="footer-legal">
-      <a href="#" id="openMentions">Mentions légales</a>
-      <a href="#" id="openConfidentialite">Politique de confidentialité</a>
-      <a href="#" id="openCookiesSettings">Gestion des cookies</a>
+      <span>Mentions légales</span>
+      <span>Politique de confidentialité</span>
     </div>
   </div>
 </footer>
 
-<!-- MODAL MENTIONS LÉGALES -->
-<div class="legal-overlay" id="modalMentions">
-  <div class="legal-panel">
-    <div class="legal-header"><div class="legal-title">Mentions légales</div><button class="legal-close" data-close="modalMentions">✕</button></div>
-    <div class="legal-body">
-
-      <div class="legal-section">
-        <h2>1. Éditeur du site</h2>
-        <p>Le présent site internet est édité par :</p>
-        <p><strong>R.BEGUIN</strong> — Entreprise individuelle<br>
-        96 Rue du Verger-Soreau, 49400 Saumur (Maine-et-Loire), France<br>
-        Téléphone : <a href="tel:0672614567" style="color:var(--blue)">06 72 61 45 67</a><br>
-        SIRET : 984 919 415 00013<br>
-        SIREN : 984 919 415<br>
-        Code APE / NAF : 4321A — Travaux d'installation électrique dans tous locaux<br>
-        Régime : Entreprise individuelle soumise au régime réel d'imposition<br>
-        Non assujetti à TVA (franchise en base, art. 293 B du CGI) — ou préciser si applicable</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>2. Directeur de la publication</h2>
-        <p>M. R. BEGUIN, en qualité de gérant et responsable de l'entreprise individuelle R.BEGUIN, est le directeur de la publication du présent site.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>3. Hébergement</h2>
-        <p>Ce site est hébergé par un prestataire professionnel d'hébergement web. Les coordonnées précises de l'hébergeur seront communiquées sur simple demande adressée à R.BEGUIN. Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), l'hébergeur conserve les données permettant d'identifier toute personne ayant contribué à la création d'un contenu en ligne.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>4. Propriété intellectuelle</h2>
-        <p>L'ensemble des éléments constituant ce site (textes, images, graphismes, logo, icônes, sons, logiciels, mise en page, base de données) est la propriété exclusive de R.BEGUIN, sauf mention contraire expresse.</p>
-        <p>Toute reproduction, représentation, modification, publication, adaptation, totale ou partielle, de ces éléments, par quelque procédé ou support que ce soit, est strictement interdite sans l'autorisation écrite préalable de R.BEGUIN. Toute exploitation non autorisée constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
-        <p>Les marques et logos reproduits sur ce site sont déposés par les sociétés qui en sont propriétaires. Toute reproduction sans autorisation est interdite.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>5. Limitation de responsabilité</h2>
-        <p>R.BEGUIN s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, R.BEGUIN ne peut garantir l'exactitude, la complétude, l'actualité ou l'adéquation des informations et services proposés sur ce site à des fins particulières.</p>
-        <p>En conséquence, R.BEGUIN décline toute responsabilité pour :</p>
-        <ul>
-          <li>Toute imprécision, inexactitude ou omission portant sur des informations disponibles sur le site</li>
-          <li>Tous dommages directs ou indirects causés au visiteur résultant de l'accès au site ou de l'utilisation des informations qu'il contient</li>
-          <li>Toute interruption ou indisponibilité du site, quelle qu'en soit la cause</li>
-          <li>Toute intrusion extérieure ou présence de virus informatiques</li>
-          <li>Tout dommage causé à l'équipement informatique des utilisateurs résultant de l'utilisation du site</li>
-        </ul>
-        <p>Les informations présentées sur ce site le sont à titre indicatif et ne constituent pas un conseil professionnel. Pour toute question technique ou juridique, il convient de contacter directement R.BEGUIN.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>6. Liens hypertextes</h2>
-        <p>Ce site peut contenir des liens hypertextes vers d'autres sites internet. R.BEGUIN n'exerce aucun contrôle sur ces sites tiers et décline toute responsabilité quant à leur contenu, leurs pratiques en matière de données personnelles ou tout dommage pouvant résulter de leur consultation.</p>
-        <p>La création de liens hypertextes pointant vers le présent site est soumise à l'accord préalable écrit de R.BEGUIN. Cet accord ne peut en aucun cas être assimilé à un accord implicite d'affiliation.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>7. Données personnelles et cookies</h2>
-        <p>La collecte et le traitement des données personnelles effectués dans le cadre de l'utilisation de ce site sont régis par la <strong>Politique de confidentialité</strong> et la <strong>Politique de gestion des cookies</strong> accessibles depuis le bas de chaque page. Ces traitements sont conformes au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi Informatique et Libertés modifiée.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>8. Droit applicable et juridiction compétente</h2>
-        <p>Le présent site et ses contenus sont régis par le droit français. En cas de litige relatif à l'interprétation ou l'exécution des présentes mentions légales, et à défaut d'accord amiable, les tribunaux français seront seuls compétents.</p>
-        <p>Conformément aux dispositions du Code de la consommation concernant le règlement amiable des litiges, R.BEGUIN adhère au service du médiateur de la consommation. Pour tout litige non résolu, le consommateur peut recourir gratuitement à ce service de médiation.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>9. Accessibilité</h2>
-        <p>R.BEGUIN s'efforce de rendre ce site accessible au plus grand nombre. En cas de difficulté d'accès, vous pouvez nous contacter au 06 72 61 45 67 afin d'obtenir les informations souhaitées par un autre moyen.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>10. Mise à jour</h2>
-        <p>Les présentes mentions légales peuvent être modifiées à tout moment, sans préavis. Il est conseillé de les consulter régulièrement. La version en vigueur est celle accessible en ligne à la date de votre visite.</p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- MODAL CONFIDENTIALITÉ -->
-<div class="legal-overlay" id="modalConfidentialite">
-  <div class="legal-panel">
-    <div class="legal-header"><div class="legal-title">Politique de confidentialité</div><button class="legal-close" data-close="modalConfidentialite">✕</button></div>
-    <div class="legal-body">
-
-      <div class="legal-section">
-        <h2>1. Responsable du traitement</h2>
-        <p>Le responsable du traitement des données à caractère personnel collectées sur ce site est :</p>
-        <p><strong>R.BEGUIN</strong> — Entreprise individuelle<br>
-        96 Rue du Verger-Soreau, 49400 Saumur<br>
-        Téléphone : 06 72 61 45 67<br>
-        SIRET : 984 919 415 00013</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>2. Données collectées</h2>
-        <p>Dans le cadre de l'utilisation de ce site, R.BEGUIN est susceptible de collecter les catégories de données personnelles suivantes :</p>
-        <ul>
-          <li><strong>Données d'identification</strong> : nom, prénom</li>
-          <li><strong>Données de contact</strong> : numéro de téléphone, code postal</li>
-          <li><strong>Données relatives à votre projet</strong> : type de prestation demandée, description du besoin, message libre</li>
-          <li><strong>Données de navigation</strong> : adresse IP, pages consultées, durée de visite, type de navigateur — uniquement avec votre consentement préalable et explicite</li>
-        </ul>
-        <p>R.BEGUIN s'engage à ne collecter que les données strictement nécessaires à la finalité poursuivie (principe de minimisation, art. 5 RGPD). Aucune donnée dite « sensible » au sens de l'article 9 du RGPD n'est collectée.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>3. Finalités et bases légales des traitements</h2>
-        <ul>
-          <li><strong>Traitement des demandes de contact et de devis</strong> — Base légale : exécution de mesures précontractuelles à la demande de la personne concernée (art. 6.1.b RGPD)</li>
-          <li><strong>Amélioration du site et mesure d'audience anonymisée</strong> — Base légale : consentement de la personne concernée (art. 6.1.a RGPD), librement donné, spécifique, éclairé et univoque</li>
-          <li><strong>Respect des obligations légales et réglementaires</strong> — Base légale : obligation légale (art. 6.1.c RGPD)</li>
-          <li><strong>Défense des intérêts légitimes de R.BEGUIN</strong> (sécurité du site, lutte contre la fraude) — Base légale : intérêts légitimes (art. 6.1.f RGPD)</li>
-        </ul>
-      </div>
-
-      <div class="legal-section">
-        <h2>4. Durée de conservation</h2>
-        <ul>
-          <li><strong>Données de contact et de devis</strong> : conservées pendant <strong>3 ans</strong> à compter du dernier contact, ou jusqu'à exercice du droit à l'effacement</li>
-          <li><strong>Données de navigation</strong> : conservées au maximum <strong>13 mois</strong> à compter du dépôt du cookie, conformément aux recommandations de la CNIL</li>
-          <li><strong>Consentement aux cookies</strong> : mémorisé pendant <strong>13 mois</strong>, après quoi le consentement est redemandé</li>
-        </ul>
-        <p>À l'issue de ces délais, les données sont supprimées définitivement ou anonymisées.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>5. Destinataires des données</h2>
-        <p>Les données collectées sont destinées exclusivement à R.BEGUIN dans le cadre de ses activités professionnelles. Elles ne sont ni vendues, ni louées, ni cédées à des tiers à des fins commerciales.</p>
-        <p>Elles peuvent être transmises à des sous-traitants techniques (hébergeur, solution de messagerie) dans le strict cadre de l'exécution de leurs prestations, lesquels sont soumis à des obligations contractuelles de confidentialité et de sécurité conformes au RGPD.</p>
-        <p>En cas d'obligation légale, judiciaire ou réglementaire, ces données pourront être communiquées aux autorités compétentes.</p>
-        <p><strong>Aucun transfert de données hors de l'Union Européenne</strong> n'est effectué à ce jour.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>6. Vos droits (RGPD)</h2>
-        <p>Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679) et à la loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, vous disposez des droits suivants sur vos données personnelles :</p>
-        <ul>
-          <li><strong>Droit d'accès</strong> (art. 15 RGPD) : obtenir confirmation que des données vous concernant sont traitées et en obtenir une copie</li>
-          <li><strong>Droit de rectification</strong> (art. 16 RGPD) : faire corriger des données inexactes ou incomplètes</li>
-          <li><strong>Droit à l'effacement</strong> (art. 17 RGPD) : demander la suppression de vos données dans les cas prévus par la loi</li>
-          <li><strong>Droit à la limitation du traitement</strong> (art. 18 RGPD) : demander la suspension temporaire du traitement</li>
-          <li><strong>Droit à la portabilité</strong> (art. 20 RGPD) : recevoir vos données dans un format structuré, couramment utilisé et lisible par machine</li>
-          <li><strong>Droit d'opposition</strong> (art. 21 RGPD) : vous opposer à tout moment au traitement de vos données pour des raisons tenant à votre situation particulière</li>
-          <li><strong>Droit de retirer votre consentement</strong> à tout moment, sans porter atteinte à la licéité des traitements effectués avant ce retrait</li>
-          <li><strong>Droit de définir des directives</strong> relatives au sort de vos données après votre décès</li>
-        </ul>
-        <p>Pour exercer l'un de ces droits, contactez-nous par téléphone au <strong>06 72 61 45 67</strong> ou par courrier à l'adresse suivante : R.BEGUIN, 96 Rue du Verger-Soreau, 49400 Saumur. Nous nous engageons à vous répondre dans un délai d'un mois à compter de la réception de votre demande.</p>
-        <p>En cas de réponse insatisfaisante ou d'absence de réponse, vous disposez du droit d'introduire une réclamation auprès de l'autorité de contrôle compétente : la <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong>, 3 Place de Fontenoy, 75007 Paris — <a href="https://www.cnil.fr" target="_blank" rel="noopener" style="color:var(--blue)">www.cnil.fr</a>.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>7. Sécurité des données</h2>
-        <p>R.BEGUIN met en œuvre les mesures techniques et organisationnelles appropriées, conformément à l'article 32 du RGPD, pour assurer la sécurité, l'intégrité et la confidentialité de vos données personnelles et les protéger contre tout accès non autorisé, divulgation, altération ou destruction accidentelle ou illicite.</p>
-        <p>En cas de violation de données à caractère personnel susceptible d'engendrer un risque élevé pour vos droits et libertés, vous en serez informé dans les meilleurs délais, conformément à l'article 34 du RGPD.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>8. Formulaire de contact</h2>
-        <p>L'utilisation du formulaire de contact présent sur ce site implique la collecte des données que vous renseignez. Ces données sont utilisées exclusivement pour traiter votre demande et ne font l'objet d'aucune utilisation commerciale non sollicitée. Vous pouvez à tout moment demander leur suppression en nous contactant.</p>
-        <p>Le formulaire de contact est fourni à titre indicatif. L'envoi d'un message ne constitue pas un engagement contractuel de la part de R.BEGUIN.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>9. Cookies — Renvoi</h2>
-        <p>La gestion détaillée des cookies déposés sur ce site est décrite dans notre <strong>Politique de gestion des cookies</strong>, accessible via le lien dédié en bas de chaque page. Vous pouvez modifier vos préférences à tout moment.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>10. Mise à jour de la politique</h2>
-        <p>La présente politique de confidentialité peut être mise à jour à tout moment afin de refléter les évolutions légales, réglementaires ou techniques. La date de dernière mise à jour sera indiquée en haut du document. Nous vous encourageons à la consulter régulièrement. En continuant à utiliser le site après toute modification, vous acceptez la politique mise à jour.</p>
-        <p><em>Dernière mise à jour : avril 2025</em></p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- MODAL COOKIES -->
-<div class="legal-overlay" id="modalCookies">
-  <div class="legal-panel">
-    <div class="legal-header"><div class="legal-title">Gestion des cookies</div><button class="legal-close" data-close="modalCookies">✕</button></div>
-    <div class="legal-body">
-      <div class="legal-section"><h2>À quoi servent les cookies ?</h2><p>Les cookies sont de petits fichiers déposés sur votre appareil lors de votre visite. Ils assurent le bon fonctionnement du site et, avec votre consentement, mesurent son audience.</p></div>
-      <div class="legal-section"><h2>Vos préférences</h2>
-        <div class="cookie-row"><div><div class="cookie-name">🔒 Cookies nécessaires</div><p style="font-size:.82rem;color:var(--muted);margin-top:4px">Indispensables au fonctionnement (mémorisation du consentement). Non désactivables.</p></div><span class="cookie-badge always-on">Toujours actif</span></div>
-        <div class="cookie-row"><div><div class="cookie-name">📊 Cookies analytiques</div><p style="font-size:.82rem;color:var(--muted);margin-top:4px">Mesure d'audience anonymisée pour améliorer le site. Uniquement avec votre accord.</p></div><label class="toggle-switch"><input type="checkbox" id="analyticsToggle"><div class="toggle-track"><div class="toggle-thumb"></div></div></label></div>
-        <div class="cookie-row"><div><div class="cookie-name">🎯 Cookies marketing</div><p style="font-size:.82rem;color:var(--muted);margin-top:4px">Ce site n'utilise aucun cookie marketing ou publicitaire.</p></div><span class="cookie-badge always-off">Non utilisé</span></div>
-      </div>
-      <div class="legal-section"><h2>Durée de conservation</h2><p>Votre choix est mémorisé <strong>13 mois</strong>. Modifiable à tout moment via "Gestion des cookies" en bas de page.</p></div>
-      <div class="cookie-modal-actions">
-        <button class="btn-sm btn-sm-primary" id="saveCookiePrefs">Enregistrer mes choix</button>
-        <button class="btn-sm btn-sm-outline" id="acceptAllFromModal">Tout accepter</button>
-        <button class="btn-sm btn-sm-outline" id="refuseAllFromModal">Tout refuser</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- COOKIE BANNER -->
-<div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-banner-inner">
-    <div class="cookie-banner-text">
-      <span class="cookie-banner-icon">🍪</span>
-      <div><strong>Ce site utilise des cookies</strong><p>Nous utilisons des cookies pour améliorer votre expérience. Certains sont nécessaires, d'autres nécessitent votre consentement (RGPD).</p></div>
-    </div>
-    <div class="cookie-banner-actions">
-      <button class="cbtn cbtn-settings" id="cookieSettingsBtn">Personnaliser</button>
-      <button class="cbtn cbtn-refuse" id="cookieRefuseBtn">Tout refuser</button>
-      <button class="cbtn cbtn-accept" id="cookieAcceptBtn">Tout accepter</button>
-    </div>
-  </div>
-</div>
-
 <script>
-// BURGER
-const burger=document.getElementById('burger'),mobileMenu=document.getElementById('mobileMenu');
-burger.addEventListener('click',()=>{const o=mobileMenu.classList.toggle('open');burger.classList.toggle('open',o);document.body.style.overflow=o?'hidden':''});
-document.querySelectorAll('.mobile-link,.mobile-menu-phone').forEach(l=>l.addEventListener('click',()=>{mobileMenu.classList.remove('open');burger.classList.remove('open');document.body.style.overflow=''}));
+  // Scroll fade-in
+  const fades = document.querySelectorAll('.fade-in');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  fades.forEach(el => obs.observe(el));
 
-// SCROLL REVEAL
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  // Menu burger
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navLinks  = document.getElementById('navLinks');
+  const overlay   = document.getElementById('menuOverlay');
 
-// MODALS
-function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden'}
-function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
-document.getElementById('openMentions').addEventListener('click',e=>{e.preventDefault();openModal('modalMentions')});
-document.getElementById('openConfidentialite').addEventListener('click',e=>{e.preventDefault();openModal('modalConfidentialite')});
-document.getElementById('openCookiesSettings').addEventListener('click',e=>{e.preventDefault();syncToggle();openModal('modalCookies')});
-document.querySelectorAll('.legal-close').forEach(b=>b.addEventListener('click',()=>closeModal(b.dataset.close)));
-document.querySelectorAll('.legal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id)}));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.legal-overlay.open').forEach(m=>closeModal(m.id))});
+  function toggleMenu() {
+    const isOpen = navLinks.classList.toggle('open');
+    burgerBtn.classList.toggle('open', isOpen);
+    overlay.classList.toggle('active', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    burgerBtn.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+  }
 
-// COOKIES
-const COOKIE_KEY='rbeguin_consent';
-const banner=document.getElementById('cookieBanner');
-function getConsent(){try{return JSON.parse(localStorage.getItem(COOKIE_KEY))}catch{return null}}
-function saveConsent(a){localStorage.setItem(COOKIE_KEY,JSON.stringify({analytics:a,date:new Date().toISOString()}))}
-function hideBanner(){banner.classList.remove('visible')}
-function syncToggle(){const c=getConsent();document.getElementById('analyticsToggle').checked=c?c.analytics:false}
-(function(){const c=getConsent();if(!c){setTimeout(()=>banner.classList.add('visible'),900);return}if((Date.now()-new Date(c.date))/(1000*60*60*24*30)>13){localStorage.removeItem(COOKIE_KEY);setTimeout(()=>banner.classList.add('visible'),900)}})();
-document.getElementById('cookieAcceptBtn').addEventListener('click',()=>{saveConsent(true);hideBanner()});
-document.getElementById('cookieRefuseBtn').addEventListener('click',()=>{saveConsent(false);hideBanner()});
-document.getElementById('cookieSettingsBtn').addEventListener('click',()=>{syncToggle();hideBanner();openModal('modalCookies')});
-document.getElementById('saveCookiePrefs').addEventListener('click',()=>{saveConsent(document.getElementById('analyticsToggle').checked);closeModal('modalCookies')});
-document.getElementById('acceptAllFromModal').addEventListener('click',()=>{document.getElementById('analyticsToggle').checked=true;saveConsent(true);closeModal('modalCookies')});
-document.getElementById('refuseAllFromModal').addEventListener('click',()=>{document.getElementById('analyticsToggle').checked=false;saveConsent(false);closeModal('modalCookies')});
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    burgerBtn.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    burgerBtn.setAttribute('aria-label', 'Ouvrir le menu');
+  }
+
+  // Fermer avec Échap
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+  // Formulaire devis
+  function handleSend() {
+    const prenom = document.getElementById('prenom').value.trim();
+    const tel    = document.getElementById('tel').value.trim();
+    const svc    = document.getElementById('service').value;
+    if (!prenom || !tel || !svc) { alert('Merci de remplir les champs obligatoires (prénom, téléphone et type de travaux).'); return; }
+    alert('Merci ' + prenom + ' ! Votre demande a bien été enregistrée. A2C Bâtiment vous contactera dans les 24 h au ' + tel + '.');
+  }
 </script>
 </body>
 </html>
